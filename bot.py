@@ -26,15 +26,6 @@ if not TOKEN or TOKEN == "YOUR_BOT_TOKEN_HERE":
         "実行環境の環境変数に DISCORD_TOKEN としてBotトークンを設定してください。"
     )
 
-# 起動前チェック：VC常駐機能に必須の PyNaCl が入っているか確認する
-try:
-    import nacl  # noqa: F401
-except ImportError:
-    raise SystemExit(
-        "❌ PyNaCl がインストールされていません。\n"
-        "ボイスチャンネル接続に必須のライブラリです。`pip install pynacl` を実行してください。"
-    )
-# ====================================================
 
 JMA_HEADERS = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) DiscordBot"}
 
